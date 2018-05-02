@@ -6,7 +6,7 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>developer.dribbble.com/</key>
+			<key>api.instagram.com.com</key>
 			<dict>
 				<key>NSIncludesSubdomains</key>
 				<true/>
