@@ -41,7 +41,7 @@ class InstagramViewController: UIViewController, UIWebViewDelegate {
     
     func getAccessToken(authToken: String) {
         self.navigationController?.popViewController(animated: true)
-        let url = "\(Constants.APIURL)access_token=\(authToken)"
+        let url = "\(Constants.APIURL)self/?access_token=\(authToken)"
         var request: URLRequest = URLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringCacheData
@@ -50,7 +50,7 @@ class InstagramViewController: UIViewController, UIWebViewDelegate {
             if let data = data {
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
                 print(json)
-                let strFullName = (json?.value(forKey: "data") as AnyObject).value(forKey: "filter") as? String
+                let strFullName = (json?.value(forKey: "data") as AnyObject).value(forKey: "full_name") as? String
                 
                 let alert = UIAlertController(title: "FULL NAME", message: strFullName, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: "Ok action"), style: .default, handler: nil)
