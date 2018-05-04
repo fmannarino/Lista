@@ -6,11 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lista de álbuns-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lista" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,14 +33,56 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Iyw-FN-dAA"/>
+                    <navigationItem key="navigationItem" title="Lista de álbuns" id="Iyw-FN-dAA"/>
                     <connections>
                         <outlet property="tableView" destination="lTX-LU-BUs" id="JMs-KL-hWF"/>
+                        <segue destination="bkb-Gg-Bfj" kind="show" identifier="showAlbum" id="9MA-eY-kyA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1608.8" y="32.833583208395808"/>
+        </scene>
+        <!--Album View Controller-->
+        <scene sceneID="XMG-So-pSo">
+            <objects>
+                <viewController id="bkb-Gg-Bfj" customClass="AlbumViewController" customModule="Lista" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K10-MI-9n4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vc-pv-Ek6">
+                                <rect key="frame" x="16" y="129" width="343" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4nl-xc-R1I">
+                                <rect key="frame" x="16" y="186.5" width="343" height="257"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4nl-xc-R1I" secondAttribute="height" multiplier="4:3" id="tfz-U5-6FD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z5p-rh-gcD" firstAttribute="trailing" secondItem="4nl-xc-R1I" secondAttribute="trailing" constant="16" id="WY2-fC-ESW"/>
+                            <constraint firstItem="9Vc-pv-Ek6" firstAttribute="top" secondItem="Z5p-rh-gcD" secondAttribute="top" constant="65" id="ZyG-C2-gIP"/>
+                            <constraint firstItem="4nl-xc-R1I" firstAttribute="leading" secondItem="Z5p-rh-gcD" secondAttribute="leading" constant="16" id="ce4-Wg-kds"/>
+                            <constraint firstItem="4nl-xc-R1I" firstAttribute="top" secondItem="9Vc-pv-Ek6" secondAttribute="bottom" constant="26" id="gFR-0n-027"/>
+                            <constraint firstItem="9Vc-pv-Ek6" firstAttribute="leading" secondItem="Z5p-rh-gcD" secondAttribute="leading" constant="16" id="hUf-n5-0dk"/>
+                            <constraint firstItem="Z5p-rh-gcD" firstAttribute="trailing" secondItem="9Vc-pv-Ek6" secondAttribute="trailing" constant="16" id="t2Z-LQ-Ouh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z5p-rh-gcD"/>
+                    </view>
+                    <connections>
+                        <outlet property="albumImage" destination="4nl-xc-R1I" id="zr4-dJ-eor"/>
+                        <outlet property="lbltitle" destination="9Vc-pv-Ek6" id="D4M-Wr-twB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q94-Vr-6po" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2493.5999999999999" y="32.833583208395808"/>
         </scene>
         <!--Instagram View Controller-->
         <scene sceneID="Rz5-pD-aHc">
@@ -69,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkh-mE-CTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452" y="32.833583208395808"/>
+            <point key="canvasLocation" x="1609" y="-747"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yVk-B5-jw2">

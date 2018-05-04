@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var photosList = [Photos]()
     var refreshCtrl = UIRefreshControl()
+    var selectedAlbum: Photos?
     @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -58,6 +59,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let image = UIImage(data: imageData as Data)
         cell.albumImage.image = image
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.selectedAlbum = self.photosList[indexPath.row]
+        self.performSegue(withIdentifier: "showAlbum", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAlbum" {
+            let vc = segue.destination as! AlbumViewController
+            vc.currentAlbum = self.selectedAlbum
+        }
     }
 
 }

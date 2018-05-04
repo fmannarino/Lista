@@ -19,6 +19,7 @@
 		6B5EBC46209A60DF007DCE70 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5EBC45209A60DF007DCE70 /* Photos.swift */; };
 		6B5EBC4A209A6B03007DCE70 /* PhotosListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5EBC48209A6B03007DCE70 /* PhotosListTableViewCell.swift */; };
 		6B5EBC4B209A6B03007DCE70 /* PhotosListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5EBC49209A6B03007DCE70 /* PhotosListTableViewCell.xib */; };
+		6BEFC7A7209C9949005FBF89 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEFC7A6209C9949005FBF89 /* AlbumViewController.swift */; };
 		7013992A8D9D2BDC17926D02 /* Pods_Lista.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF39417203B403D0C687BDAF /* Pods_Lista.framework */; };
 		9D17F6147B4103E044E0904C /* Pods_ListaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0831B96E6EF1869937D0EE01 /* Pods_ListaTests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		6B5EBC45209A60DF007DCE70 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
 		6B5EBC48209A6B03007DCE70 /* PhotosListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListTableViewCell.swift; sourceTree = "<group>"; };
 		6B5EBC49209A6B03007DCE70 /* PhotosListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosListTableViewCell.xib; sourceTree = "<group>"; };
+		6BEFC7A6209C9949005FBF89 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		9E3A6B943C41637561971586 /* Pods-Lista.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lista.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lista/Pods-Lista.debug.xcconfig"; sourceTree = "<group>"; };
 		CF39417203B403D0C687BDAF /* Pods_Lista.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lista.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26D16A330900CD3EA158908 /* Pods-ListaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ListaTests/Pods-ListaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				6B5EBC232094BAB1007DCE70 /* Info.plist */,
 				6B5EBC3B2097A6E8007DCE70 /* Constants.swift */,
 				6B5EBC3D2097AACD007DCE70 /* InstagramViewController.swift */,
+				6BEFC7A6209C9949005FBF89 /* AlbumViewController.swift */,
 			);
 			path = Lista;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				6B5EBC43209A5FC2007DCE70 /* Services.swift in Sources */,
 				6B5EBC1A2094BAAE007DCE70 /* ViewController.swift in Sources */,
 				6B5EBC4A209A6B03007DCE70 /* PhotosListTableViewCell.swift in Sources */,
+				6BEFC7A7209C9949005FBF89 /* AlbumViewController.swift in Sources */,
 				6B5EBC3E2097AACD007DCE70 /* InstagramViewController.swift in Sources */,
 				6B5EBC182094BAAE007DCE70 /* AppDelegate.swift in Sources */,
 				6B5EBC3C2097A6E8007DCE70 /* Constants.swift in Sources */,
