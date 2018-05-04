@@ -21,15 +21,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        //tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.estimatedRowHeight = 188.0
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.register(UINib(nibName: "PhotosListTableViewCell", bundle:nil), forCellReuseIdentifier: "cellPhotosList")
+        
         getPhotos()
-        //print(photosList[0].title)
     }
 
     override func didReceiveMemoryWarning() {

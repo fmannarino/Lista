@@ -18,15 +18,8 @@ final class Services{
                 let jsonData = try Data(contentsOf: url!)
                 photosList = try JSONDecoder().decode([Photos].self, from: jsonData)
                 completion(photosList, nil)
-        //        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-        //            do {
-        //                photosList = try JSONDecoder().decode([Photos].self, from: data!)
-        //                completion(photosList, nil)
-        //            } catch {
-        //                print("Error")
-        //            }
             } catch {
-                print("erro")
+                print("Ocorreu um erro no JSON")
             }
     }
 }
